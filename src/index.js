@@ -5,13 +5,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Another } from './another';
 import { Routedata } from './route';
+import SidebarItem from './sidebarheader';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
     {/* <Another/> */}
-    <Routedata/>
+    {/* <Routedata/> */}
+    <SidebarItem/>
+
   </React.StrictMode>
 );
 

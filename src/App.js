@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Another } from './another';
+
 
 function App() {
   const [name,setName]=useState("")
@@ -23,7 +23,7 @@ const nav=useNavigate();
     <input type='text' value={name} onChange={(e)=>setName(e.target.value)}/>
     <button type='button' onClick={clickevent}>btn</button>
     {/* <button type='button' onclick={()=>{nav("/ano")}}>click</button> */}
-    <button type='button' onClick={() => nav("/ano")}>click</button>
+    <button type='button' onClick={() => nav("/another", {state:{data}})}>click</button>
 
    
     {data.map((item, index) => (
@@ -31,7 +31,7 @@ const nav=useNavigate();
       ))}
       <p>{data[5]}</p>
       {data}
-      <Another val={data}/>
+      {/* <Another val={data}/> */}
     </>
   );
 }
